@@ -255,6 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270676560}
   - component: {fileID: 270676561}
+  - component: {fileID: 270676562}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -298,6 +299,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animEnable: {fileID: 11400000, guid: 4083a342fd2cd4b4095630241c8f81ef, type: 2}
   animDisable: {fileID: 11400000, guid: 4a40b894996640a41a48142c492ef228, type: 2}
+--- !u!225 &270676562
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270676559}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &457508409
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467111979}
   - component: {fileID: 467111980}
+  - component: {fileID: 467111981}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -432,6 +446,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animEnable: {fileID: 11400000, guid: 4083a342fd2cd4b4095630241c8f81ef, type: 2}
   animDisable: {fileID: 11400000, guid: 4a40b894996640a41a48142c492ef228, type: 2}
+--- !u!225 &467111981
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467111978}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &576177031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384408732}
   - component: {fileID: 1384408733}
+  - component: {fileID: 1384408734}
   m_Layer: 5
   m_Name: About
   m_TagString: Untagged
@@ -1449,6 +1476,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animEnable: {fileID: 11400000, guid: 4083a342fd2cd4b4095630241c8f81ef, type: 2}
   animDisable: {fileID: 11400000, guid: 4a40b894996640a41a48142c492ef228, type: 2}
+--- !u!225 &1384408734
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384408731}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1401964788
 GameObject:
   m_ObjectHideFlags: 0

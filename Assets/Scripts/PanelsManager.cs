@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using System.Linq;
+using UnityEngine;
 
 public class PanelsManager : MonoBehaviour
 {
@@ -11,22 +9,18 @@ public class PanelsManager : MonoBehaviour
     public List<Panel> panels;
     public Panel currentPanel;
 
-    private void Awake()
-    {
+    private void Awake() {
         panels = GetComponentsInChildren<Panel>(true).ToList();
-        
-        if (panels.Count > 0)
-        {
+
+        if (panels.Count > 0) {
             defaultPanel = panels[0];
         }
-        
+
         EnablePanel(defaultPanel);
     }
 
-    private void EnablePanel(Panel panel)
-    {
-        if (panel != null)
-        {
+    private void EnablePanel(Panel panel) {
+        if (panel != null) {
             DisableAll();
             currentPanel = panel;
             currentPanel.gameObject.SetActive(true);
@@ -34,34 +28,29 @@ public class PanelsManager : MonoBehaviour
         }
     }
 
-    public void SetPanelByName(string panelName)
-    {
+    public void SetPanelByName(string panelName) {
         Panel panel = GetPanelByName(panelName);
         EnablePanel(panel);
     }
 
-    private void DisableAll()
-    {
+    private void DisableAll() {
         for (int i = 0; i < panels.Count; i++)
         {
-            if (panels[i].gameObject.activeInHierarchy)
-            {
-                //panels[i].gameObject.SetActive(false);
+            if (panels[i].gameObject.activeInHierarchy) {
                 panels[i].OnPanelDisable();
             }
+
         }
     }
-    
-    private Panel GetPanelByName(string panelName)
-    {
+
+    private Panel GetPanelByName(string panelName) {
         for (int i = 0; i < panels.Count; i++)
         {
-            if (panels[i].gameObject.name == panelName)
-            {
+            if (panels[i].gameObject.name == panelName) {
                 return panels[i];
             }
         }
-        
+
         return null;
     }
 }
