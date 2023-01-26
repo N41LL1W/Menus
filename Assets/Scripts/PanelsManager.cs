@@ -30,13 +30,13 @@ public class PanelsManager : MonoBehaviour
             DisableAll();
             currentPanel = panel;
             currentPanel.gameObject.SetActive(true);
+            currentPanel.OnPanelEnable();
         }
     }
 
     public void SetPanelByName(string panelName)
     {
         Panel panel = GetPanelByName(panelName);
-        
         EnablePanel(panel);
     }
 
@@ -46,12 +46,13 @@ public class PanelsManager : MonoBehaviour
         {
             if (panels[i].gameObject.activeInHierarchy)
             {
-                panels[i].gameObject.SetActive(false);
+                //panels[i].gameObject.SetActive(false);
+                panels[i].OnPanelDisable();
             }
         }
     }
     
-    private void GetPanelByName(string panelName)
+    private Panel GetPanelByName(string panelName)
     {
         for (int i = 0; i < panels.Count; i++)
         {
@@ -61,7 +62,6 @@ public class PanelsManager : MonoBehaviour
             }
         }
         
-        return;
-        null;
+        return null;
     }
 }
